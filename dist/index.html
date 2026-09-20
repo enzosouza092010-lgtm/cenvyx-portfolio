@@ -3,374 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sites sob medida e inteligência aplicada para negócios que querem vender melhor." />
-    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Cenvyx: sites estratégicos e inteligência para negócios que querem crescer com uma presença digital mais forte." />
+    <meta name="theme-color" content="#070609" />
     <link rel="icon" type="image/png" href="./cenvyx-logo.png" />
-    <title>Cenvyx — Sites e IA para negócios</title>
+    <title>Cenvyx — Sites estratégicos e inteligência para negócios</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#portfolio-view">Ir para o conteúdo</a>
+    <a class="skip-link" href="#home-view">Ir para o conteúdo</a>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header">
-      <a class="brand" href="#inicio" data-show-portfolio aria-label="Cenvyx, início">
+      <a class="brand" href="#inicio" data-view="home" aria-label="Cenvyx, página inicial">
         <span class="brand-mark"><img src="./cenvyx-logo.png" alt="" /></span>
-        <span>Cenvyx</span>
+        <span class="brand-copy"><strong>Cenvyx</strong><small>Digital Studio</small></span>
       </a>
 
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <span class="view-nav portfolio-nav">
-          <a href="#servicos">Serviços</a>
-          <a href="#projetos" data-show-projects>Projetos</a>
-          <a href="#processo">Processo</a>
-        </span>
-        <span class="view-nav projects-nav" hidden>
-          <a href="#inicio" data-show-portfolio>Início</a>
-          <a href="#projetos" aria-current="page">Projetos</a>
-          <a href="#feedbacks">Feedbacks</a>
-        </span>
-        <span class="view-nav ai-nav" hidden>
-          <a href="#visao-ai">Visão geral</a>
-          <a href="#funcionamento-ai">Como funciona</a>
-          <a href="#planos-ai">Planos</a>
-        </span>
+        <a href="#servicos" data-home-anchor>Serviços</a>
+        <a href="#projetos" data-view="projects">Projetos</a>
+        <a href="#cenvyx-ai" data-view="ai">Cenvyx AI</a>
+        <a href="#processo" data-home-anchor>Processo</a>
       </nav>
 
-      <a class="header-cta whatsapp-link" href="#" target="_blank" rel="noreferrer">Conversar <span>↗</span></a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+      <a class="header-contact whatsapp-link interactive" href="#" target="_blank" rel="noreferrer"><span>Iniciar projeto</span><i>↗</i></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
     </header>
 
-    <div class="mobile-menu" aria-hidden="true">
+    <aside class="mobile-menu" aria-hidden="true">
       <nav aria-label="Navegação móvel">
-        <span class="mobile-view-nav portfolio-nav">
-          <a href="#servicos">Serviços</a>
-          <a href="#projetos" data-show-projects>Projetos</a>
-          <a href="#processo">Processo</a>
-        </span>
-        <span class="mobile-view-nav projects-nav" hidden>
-          <a href="#inicio" data-show-portfolio>Início</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#feedbacks">Feedbacks</a>
-        </span>
-        <span class="mobile-view-nav ai-nav" hidden>
-          <a href="#visao-ai">Visão geral</a>
-          <a href="#funcionamento-ai">Como funciona</a>
-          <a href="#planos-ai">Planos</a>
-          <a href="#inicio" data-show-portfolio>Voltar ao portfólio</a>
-        </span>
-        <a class="whatsapp-link" href="#" target="_blank" rel="noreferrer">Falar no WhatsApp ↗</a>
+        <span>Menu</span>
+        <a href="#inicio" data-view="home">Início <i>01</i></a>
+        <a href="#servicos" data-home-anchor>Serviços <i>02</i></a>
+        <a href="#projetos" data-view="projects">Projetos <i>03</i></a>
+        <a href="#cenvyx-ai" data-view="ai">Cenvyx AI <i>04</i></a>
+        <a class="mobile-whatsapp whatsapp-link" href="#" target="_blank" rel="noreferrer">Conversar no WhatsApp ↗</a>
       </nav>
-    </div>
+    </aside>
 
-    <main id="portfolio-view">
+    <main id="home-view" data-page="home">
       <section class="hero" id="inicio">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> Soluções digitais para negócios reais</div>
-          <h1>Sites que vendem.<br /><em>Inteligência</em> para decidir.</h1>
-          <p>Desenvolvo experiências digitais sob medida e uma IA pensada para transformar dúvidas de negócio em próximos passos claros.</p>
-          <div class="hero-actions">
-            <a class="button button-primary whatsapp-link" href="#" target="_blank" rel="noreferrer">Quero tirar uma ideia do papel <span>↗</span></a>
-            <a class="text-link" href="#projetos" data-show-projects>Ver projetos <span>↗</span></a>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-main">
+          <div class="hero-kicker hero-entrance"><span class="live-dot"></span><p>Sites estratégicos &amp; produtos digitais</p><small>Presidente Venceslau — SP</small></div>
+          <h1 aria-label="Sua marca merece ser levada a sério">
+            <span class="hero-line"><span>Sua marca merece</span></span>
+            <span class="hero-line hero-line-accent"><span>ser levada a sério.</span></span>
+          </h1>
+          <div class="hero-bottom hero-entrance">
+            <p>Design, estratégia e desenvolvimento para transformar atenção em confiança — e confiança em novas conversas.</p>
+            <div class="hero-actions">
+              <a class="button button-primary whatsapp-link interactive" href="#" target="_blank" rel="noreferrer"><span>Quero um site profissional</span><i>↗</i></a>
+              <a class="button button-ghost interactive" href="#projetos" data-view="projects"><span>Explorar projetos</span><i>↓</i></a>
+            </div>
           </div>
         </div>
 
-        <div class="hero-panel reveal" aria-label="Resumo dos serviços">
-          <div class="panel-topline">
-            <span>O que eu construo</span>
-            <span class="panel-index">01 / 02</span>
-          </div>
-          <div class="panel-focus">
-            <span class="panel-number">01</span>
-            <div>
-              <h2>Presença digital</h2>
-              <p>Sites rápidos, responsivos e criados para guiar o visitante até a ação.</p>
-            </div>
-          </div>
-          <div class="panel-focus secondary">
-            <span class="panel-number">02</span>
-            <div>
-              <h2>Cenvyx AI</h2>
-              <p>Clareza prática para vendas, marketing, finanças e operação.</p>
-            </div>
-          </div>
-          <div class="panel-footer">
-            <span>Estratégia</span><span>Design</span><span>Tecnologia</span>
-          </div>
-        </div>
+        <aside class="hero-showcase hero-entrance" aria-label="Projetos em destaque">
+          <div class="showcase-meta"><span>Trabalho recente</span><span>01 — 04</span></div>
+          <a class="showcase-image" href="https://micaela-semijoias.vercel.app" target="_blank" rel="noreferrer"><img src="./projects/micaela-semijoias.webp" alt="Site Micaela Semijoias" /><span class="image-arrow">↗</span></a>
+          <div class="showcase-copy"><div><small>Loja virtual</small><strong>Micaela Semijoias</strong></div><p>Uma experiência elegante, direta e preparada para vender.</p></div>
+        </aside>
+        <div class="scroll-hint" aria-hidden="true"><span></span> Role para descobrir</div>
       </section>
 
-      <section class="statement reveal" aria-label="Posicionamento">
-        <p>Não entrego apenas uma página bonita.</p>
-        <h2>Cada escolha tem uma função: transmitir confiança, explicar sua oferta e facilitar a decisão do cliente.</h2>
+      <div class="marquee" aria-label="Especialidades"><div class="marquee-track">
+        <span>Landing pages</span><i>✦</i><span>Lojas virtuais</span><i>✦</i><span>Sites institucionais</span><i>✦</i><span>Sistemas web</span><i>✦</i><span>Cenvyx AI</span><i>✦</i>
+        <span>Landing pages</span><i>✦</i><span>Lojas virtuais</span><i>✦</i><span>Sites institucionais</span><i>✦</i><span>Sistemas web</span><i>✦</i><span>Cenvyx AI</span><i>✦</i>
+      </div></div>
+
+      <section class="intro section">
+        <div class="section-index reveal"><span>01</span><p>Direção</p></div>
+        <div class="intro-copy reveal"><p class="overline">Muito além de uma página bonita</p><h2>Seu site precisa explicar valor antes que o visitante perca o interesse.</h2><div class="intro-detail"><p>Por isso cada projeto nasce com hierarquia, ritmo, conteúdo e chamadas pensadas para conduzir uma decisão.</p><p>O resultado é uma presença digital que parece sua, funciona em qualquer tela e deixa claro por que escolher o seu negócio.</p></div></div>
       </section>
 
       <section class="services section" id="servicos">
-        <div class="section-heading reveal">
-          <span class="section-label">01 — Serviços</span>
-          <h2>Duas soluções.<br />Um mesmo objetivo.</h2>
+        <div class="section-head reveal"><div><span class="overline">02 — O que construo</span><h2>Estratégia visível<br />em cada detalhe.</h2></div><p>Escolha a solução que faz sentido agora. A estrutura cresce junto com o seu negócio.</p></div>
+        <div class="service-grid">
+          <article class="service-card reveal interactive-card"><span class="card-number">01</span><div class="service-icon">↗</div><div><p class="overline">Presença digital</p><h3>Sites que posicionam e vendem</h3></div><p>Projetos sob medida para apresentar sua oferta com clareza, criar confiança e transformar visitas em contatos.</p><ul><li>Landing pages</li><li>Sites institucionais</li><li>Lojas virtuais</li><li>Portfólios</li></ul><a href="#projetos" data-view="projects">Ver projetos <span>↗</span></a></article>
+          <article class="service-card service-card-featured reveal interactive-card"><span class="card-number">02</span><div class="service-icon">✦</div><div><p class="overline">Produto Cenvyx</p><h3>Inteligência para decisões melhores</h3></div><p>Uma IA pensada para pequenos negócios que precisam organizar dados, identificar prioridades e agir com mais segurança.</p><ul><li>Vendas</li><li>Marketing</li><li>Financeiro</li><li>Operação</li></ul><a href="#cenvyx-ai" data-view="ai">Conhecer a Cenvyx AI <span>↗</span></a></article>
         </div>
+      </section>
 
-        <div class="service-list">
-          <article class="service-item reveal">
-            <div class="service-number">01</div>
-            <div class="service-content">
-              <h3>Sites sob medida</h3>
-              <p>Landing pages, sites institucionais, portfólios e lojas com identidade própria — sem aparência genérica e sem depender de modelos prontos.</p>
-              <ul>
-                <li>Design responsivo</li>
-                <li>Copy orientada à conversão</li>
-                <li>WhatsApp integrado</li>
-                <li>SEO e performance essenciais</li>
-              </ul>
-            </div>
-            <a class="circle-link whatsapp-link" href="#" target="_blank" rel="noreferrer" aria-label="Conversar sobre criação de site">↗</a>
-          </article>
-
-          <article class="service-item service-ai reveal">
-            <div class="service-number">02</div>
-            <div class="service-content">
-              <div class="product-badge">Em desenvolvimento</div>
-              <h3>Cenvyx AI</h3>
-              <p>Uma inteligência voltada a quem está começando ou administrando um pequeno negócio e precisa transformar informações em decisões práticas.</p>
-              <ul>
-                <li>Diagnóstico do negócio</li>
-                <li>Planos de ação personalizados</li>
-                <li>Apoio em vendas e marketing</li>
-                <li>Visão financeira e operacional</li>
-              </ul>
-            </div>
-            <a class="service-more" href="#cenvyx-ai" data-show-ai>Saiba mais <span>↗</span></a>
-          </article>
+      <section class="work-preview section" id="trabalhos">
+        <div class="section-head reveal"><div><span class="overline">03 — Trabalho selecionado</span><h2>Projetos reais.<br />Soluções diferentes.</h2></div><a class="round-link interactive" href="#projetos" data-view="projects" aria-label="Ver todos os projetos"><span>Todos<br />projetos</span><i>↗</i></a></div>
+        <div class="featured-work">
+          <article class="work-card work-card-wide reveal tilt-card"><a href="https://advocacia-juridica.vercel.app" target="_blank" rel="noreferrer"><div class="work-media"><img src="./projects/advocacia-vsa.webp" alt="Site Advocacia VSA" loading="lazy" /><span>Abrir projeto ↗</span></div><div class="work-caption"><div><small>Institucional</small><h3>Advocacia VSA</h3></div><p>Autoridade, clareza e acesso rápido ao atendimento.</p></div></a></article>
+          <article class="work-card reveal tilt-card"><a href="#projetos" data-view="projects"><div class="work-media"><img src="./projects/black-house-barbearia.webp" alt="Sistema Black House Barbearia" loading="lazy" /><span>Ver detalhes ↗</span></div><div class="work-caption"><div><small>Agendamento</small><h3>Black House</h3></div><p>Experiência premium do primeiro clique ao horário marcado.</p></div></a></article>
         </div>
+      </section>
+
+      <section class="ai-feature section" aria-labelledby="ai-feature-title">
+        <div class="ai-feature-copy reveal"><span class="product-tag"><i></i> Produto em desenvolvimento</span><p class="overline">Cenvyx AI</p><h2 id="ai-feature-title">Dados soltos não ajudam.<br />Direção ajuda.</h2><p>A Cenvyx AI conecta o contexto da empresa aos números para mostrar onde agir primeiro — com recomendações claras para vendas, marketing, finanças e operação.</p><a class="button button-primary interactive" href="#cenvyx-ai" data-view="ai"><span>Descobrir como funciona</span><i>↗</i></a></div>
+        <div class="ai-interface reveal" aria-label="Demonstração da interface Cenvyx AI"><div class="interface-top"><span><img src="./cenvyx-logo.png" alt="" /> Cenvyx AI</span><i>Diagnóstico ativo</i></div><div class="interface-query"><small>SUA PERGUNTA</small><p>Onde está o principal gargalo das minhas vendas?</p></div><div class="interface-answer"><div class="answer-label"><span>01</span><small>OPORTUNIDADE PRINCIPAL</small></div><h3>Seu volume de contatos é suficiente. O próximo ganho está na qualidade e frequência do follow-up.</h3><div class="insight-row"><span>Conversão <strong>8%</strong></span><span>Retorno <strong>3 dias</strong></span><span>Potencial <strong>+22%</strong></span></div></div></div>
+      </section>
+
+      <section class="proof section">
+        <div class="section-index reveal"><span>04</span><p>Prova de trabalho</p></div>
+        <div class="proof-content"><div class="proof-statement reveal"><p class="overline">Sem promessas vazias</p><h2>Antes de falar em resultado, eu mostro o trabalho.</h2></div><div class="proof-metrics"><article class="reveal"><strong data-count="4">4</strong><span>projetos apresentados</span></article><article class="reveal"><strong data-count="4">4</strong><span>segmentos diferentes</span></article><article class="reveal"><strong>100%</strong><span>adaptado para celular</span></article></div></div>
       </section>
 
       <section class="process section" id="processo">
-        <div class="section-heading reveal">
-          <span class="section-label">02 — Como funciona</span>
-          <h2>Do problema ao<br />projeto no ar.</h2>
-        </div>
-        <div class="process-grid">
-          <article class="process-step reveal"><span>01</span><h3>Diagnóstico</h3><p>Entendo o negócio, o público e o que precisa mudar.</p></article>
-          <article class="process-step reveal"><span>02</span><h3>Direção</h3><p>Definimos estrutura, conteúdo e a identidade do projeto.</p></article>
-          <article class="process-step reveal"><span>03</span><h3>Construção</h3><p>Desenvolvo, reviso e adapto tudo para celular e desktop.</p></article>
-          <article class="process-step reveal"><span>04</span><h3>Entrega</h3><p>Seu projeto entra no ar com orientação para os próximos passos.</p></article>
-        </div>
+        <div class="section-head reveal"><div><span class="overline">05 — Processo</span><h2>Clareza do primeiro<br />contato à publicação.</h2></div><p>Um processo simples, visível e sem etapas escondidas.</p></div>
+        <div class="process-list"><article class="process-item reveal"><span>01</span><h3>Diagnóstico</h3><p>Entendo o negócio, o público, a oferta e o objetivo principal.</p><i>↘</i></article><article class="process-item reveal"><span>02</span><h3>Direção</h3><p>Organizamos conteúdo, estrutura, identidade e chamadas para ação.</p><i>↘</i></article><article class="process-item reveal"><span>03</span><h3>Construção</h3><p>Desenvolvo, testo e refino a experiência em computador e celular.</p><i>↘</i></article><article class="process-item reveal"><span>04</span><h3>Publicação</h3><p>O projeto entra no ar com domínio, orientações e próximos passos.</p><i>✓</i></article></div>
       </section>
 
-      <section class="final-cta reveal">
-        <div class="cta-meta"><span>Tem um projeto em mente?</span><span>Disponível para novos trabalhos</span></div>
-        <h2>Vamos construir algo<br /><em>difícil de ignorar.</em></h2>
-        <a class="button button-light whatsapp-link" href="#" target="_blank" rel="noreferrer">Começar uma conversa <span>↗</span></a>
-      </section>
+      <section class="contact-section"><div class="contact-orbit" aria-hidden="true"><span></span><span></span></div><p class="overline reveal">Seu próximo projeto pode começar aqui</p><h2 class="reveal">Vamos construir algo<br /><em>impossível de ignorar.</em></h2><div class="contact-actions reveal"><a class="button button-light whatsapp-link interactive" href="#" target="_blank" rel="noreferrer"><span>Conversar no WhatsApp</span><i>↗</i></a><a class="phone-link" href="tel:+5518981466441">(18) 98146-6441</a></div></section>
     </main>
 
-    <main id="projects-view" hidden>
-      <section class="projects-page-hero" aria-labelledby="projects-title">
-        <div class="reveal">
-          <span class="section-label">Portfólio Cenvyx</span>
-          <h1 id="projects-title">Projetos reais.<br /><em>Identidades diferentes.</em></h1>
-        </div>
-        <div class="projects-intro reveal">
-          <p>Cada projeto foi criado a partir do segmento, da oferta e da experiência que o cliente precisava entregar — sem repetir fórmulas prontas.</p>
-          <a class="text-link" href="#inicio" data-show-portfolio>Voltar ao início <span>↖</span></a>
-        </div>
+    <main id="projects-view" data-page="projects" hidden>
+      <section class="subpage-hero projects-hero"><div class="subpage-title hero-entrance"><span class="overline">Projetos Cenvyx</span><h1>O trabalho<br />fala primeiro.</h1></div><div class="subpage-side hero-entrance"><p>Quatro negócios, quatro necessidades e quatro direções visuais próprias. Explore os projetos abaixo.</p><a href="#inicio" data-view="home">Voltar ao início ↖</a></div></section>
+      <section class="project-catalog section" id="projetos">
+        <article class="catalog-card catalog-card-full reveal"><a href="https://micaela-semijoias.vercel.app" target="_blank" rel="noreferrer"><div class="catalog-media"><img src="./projects/micaela-semijoias.webp" alt="Página inicial Micaela Semijoias" /><span>Visitar site ↗</span></div><div class="catalog-info"><span>01 / Loja virtual</span><h2>Micaela Semijoias</h2><p>Catálogo, carrinho e identidade editorial para transformar produto em desejo.</p></div></a></article>
+        <article class="catalog-card reveal"><a href="https://advocacia-juridica.vercel.app" target="_blank" rel="noreferrer"><div class="catalog-media"><img src="./projects/advocacia-vsa.webp" alt="Página inicial Advocacia VSA" /><span>Visitar site ↗</span></div><div class="catalog-info"><span>02 / Institucional</span><h2>Advocacia VSA</h2><p>Autoridade profissional, áreas de atuação e contato sem excesso de informação.</p></div></a></article>
+        <article class="catalog-card reveal"><div class="catalog-media"><img src="./projects/futgami-lanches.webp" alt="Sistema Futgami Lanches" /><span>Projeto entregue</span></div><div class="catalog-info"><span>03 / Pedidos</span><h2>Futgami Lanches</h2><p>Cardápio, carrinho e acompanhamento para facilitar o pedido do início ao fim.</p></div></article>
+        <article class="catalog-card catalog-card-full reveal"><div class="catalog-media"><img src="./projects/black-house-barbearia.webp" alt="Sistema Black House Barbearia" /><span>Projeto entregue</span></div><div class="catalog-info"><span>04 / Agendamento</span><h2>Black House</h2><p>Uma experiência escura e sofisticada para consultar e reservar horários.</p></div></article>
       </section>
-
-      <section class="projects section projects-page-list" id="projetos">
-        <div class="section-heading projects-heading reveal">
-          <div>
-            <span class="section-label">Projetos selecionados</span>
-            <h2>Veja o que sua<br />marca pode se tornar.</h2>
-          </div>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-large reveal" data-category="site">
-            <a class="project-media-link" href="https://micaela-semijoias.vercel.app" target="_blank" rel="noreferrer" aria-label="Abrir o site Micaela Semijoias">
-              <div class="project-visual">
-                <img class="project-image" src="./projects/micaela-semijoias.webp" alt="Página inicial da loja virtual Micaela Semijoias" loading="lazy" />
-                <span class="project-open">Abrir site ↗</span>
-              </div>
-            </a>
-            <div class="project-info">
-              <div><span>Loja virtual</span><h3>Micaela Semijoias</h3></div>
-              <p>Catálogo de produtos, carrinho e contato integrado para uma marca de semijoias.</p>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-category="site">
-            <a class="project-media-link" href="https://advocacia-juridica.vercel.app" target="_blank" rel="noreferrer" aria-label="Abrir o site Advocacia VSA">
-              <div class="project-visual">
-                <img class="project-image" src="./projects/advocacia-vsa.webp" alt="Página inicial do site institucional Advocacia VSA" loading="lazy" />
-                <span class="project-open">Abrir site ↗</span>
-              </div>
-            </a>
-            <div class="project-info">
-              <div><span>Site institucional</span><h3>Advocacia VSA</h3></div>
-              <p>Apresentação do escritório, áreas de atuação e contato para atendimento.</p>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-category="site">
-            <div class="project-visual">
-              <img class="project-image" src="./projects/futgami-lanches.webp" alt="Página inicial do sistema de pedidos Futgami Lanches" loading="lazy" />
-              <span class="project-status">Projeto entregue</span>
-            </div>
-            <div class="project-info">
-              <div><span>Cardápio e pedidos</span><h3>Futgami Lanches</h3></div>
-              <p>Cardápio digital com carrinho, pedidos e acompanhamento pelo cliente.</p>
-            </div>
-          </article>
-
-          <article class="project-card project-wide reveal" data-category="site">
-            <div class="project-visual">
-              <img class="project-image" src="./projects/black-house-barbearia.webp" alt="Página inicial do sistema de agendamento Black House Barbearia" loading="lazy" />
-              <span class="project-status">Projeto entregue</span>
-            </div>
-            <div class="project-info">
-              <div><span>Agendamento online</span><h3>Black House Barbearia</h3></div>
-              <p>Experiência de agendamento com horários, localização e visão do atendimento.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="testimonials section" id="feedbacks">
-        <div class="section-heading reveal">
-          <span class="section-label">Espaço para feedbacks</span>
-          <h2>Experiências que<br />também contam.</h2>
-        </div>
-        <p class="testimonial-note reveal">Os textos abaixo demonstram como os depoimentos serão apresentados. São exemplos ilustrativos e serão substituídos por relatos reais autorizados.</p>
-        <div class="testimonial-grid">
-          <article class="testimonial-card reveal">
-            <span>Exemplo ilustrativo</span>
-            <blockquote>“O site ficou fácil de entender e passou exatamente a imagem que eu queria para o meu negócio.”</blockquote>
-            <p><strong>Modelo de depoimento</strong><small>Loja virtual</small></p>
-          </article>
-          <article class="testimonial-card reveal">
-            <span>Exemplo ilustrativo</span>
-            <blockquote>“Gostei muito do cuidado com os detalhes. No celular ficou rápido, organizado e bem profissional.”</blockquote>
-            <p><strong>Modelo de depoimento</strong><small>Negócio local</small></p>
-          </article>
-          <article class="testimonial-card reveal">
-            <span>Exemplo ilustrativo</span>
-            <blockquote>“O processo foi direto e todas as alterações ficaram do jeito que eu precisava, sem complicação.”</blockquote>
-            <p><strong>Modelo de depoimento</strong><small>Serviço profissional</small></p>
-          </article>
-        </div>
-      </section>
-
-      <section class="final-cta reveal" id="contato-projetos">
-        <div class="cta-meta"><span>Quer um projeto com a sua identidade?</span><span>Atendimento pelo WhatsApp</span></div>
-        <h2>Vamos transformar sua ideia<br /><em>em presença digital.</em></h2>
-        <a class="button button-light whatsapp-link" href="#" target="_blank" rel="noreferrer">Conversar sobre meu projeto <span>↗</span></a>
-      </section>
+      <section class="testimonial-demo section" id="feedbacks"><div class="section-head reveal"><div><span class="overline">Feedbacks</span><h2>Experiências que<br />completam o projeto.</h2></div><p>Área preparada para receber depoimentos reais e autorizados.</p></div><div class="testimonial-notice reveal"><span>Transparência</span><p>Os comentários ilustrativos foram removidos da apresentação principal. Assim que houver relatos reais, eles entram aqui com nome e autorização do cliente.</p></div></section>
+      <section class="contact-section compact-contact"><p class="overline reveal">Gostou do que viu?</p><h2 class="reveal">Seu negócio pode ser<br /><em>o próximo projeto.</em></h2><div class="contact-actions reveal"><a class="button button-light whatsapp-link interactive" href="#" target="_blank" rel="noreferrer"><span>Solicitar orçamento</span><i>↗</i></a><a href="#inicio" data-view="home">Voltar ao início</a></div></section>
     </main>
 
-    <main id="ai-view" hidden>
-      <section class="ai-hero" id="visao-ai">
-        <div class="ai-hero-copy reveal">
-          <span class="section-label">Cenvyx AI — Assistente de negócios</span>
-          <h1>Entenda o negócio.<br />Decida com mais clareza.</h1>
-          <p>A Cenvyx AI organiza informações da sua empresa, identifica pontos de atenção e transforma dúvidas em ações práticas para vendas, marketing, finanças e operação.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#planos-ai">Conhecer os planos <span>↓</span></a>
-            <a class="text-link" href="#inicio" data-show-portfolio>Voltar ao portfólio <span>↖</span></a>
-          </div>
-        </div>
-
-        <div class="ai-product-panel reveal" aria-label="Exemplo de diagnóstico da Cenvyx AI">
-          <div class="product-panel-head">
-            <span>Cenvyx AI</span>
-            <span>Análise em andamento</span>
-          </div>
-          <div class="product-question">
-            <small>DIAGNÓSTICO ATUAL</small>
-            <h2>Por que minhas vendas não estão crescendo?</h2>
-          </div>
-          <div class="product-answer">
-            <span>Principal oportunidade</span>
-            <p>Seu volume de leads é suficiente. O maior impacto agora está em melhorar a frequência e a qualidade do follow-up.</p>
-          </div>
-          <div class="product-metrics">
-            <div><strong>8%</strong><span>Conversão atual</span></div>
-            <div><strong>3 dias</strong><span>Tempo de retorno</span></div>
-            <div><strong>+22%</strong><span>Potencial estimado</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="ai-intro section reveal">
-        <span class="section-label">Uma visão completa</span>
-        <h2>Menos respostas genéricas.<br />Mais contexto sobre a sua realidade.</h2>
-        <p>Em vez de entregar conselhos soltos, a Cenvyx AI considera seus números, objetivos e dificuldades para apontar prioridades e sugerir o próximo passo.</p>
-      </section>
-
-      <section class="capabilities section" aria-label="Áreas atendidas pela Cenvyx AI">
-        <div class="capabilities-grid">
-          <article class="capability reveal"><span>01</span><h3>Vendas</h3><p>Analisa conversão, ticket médio, propostas, follow-up e motivos de perda.</p></article>
-          <article class="capability reveal"><span>02</span><h3>Marketing</h3><p>Ajuda a definir público, oferta, canais, conteúdo e oportunidades de aquisição.</p></article>
-          <article class="capability reveal"><span>03</span><h3>Financeiro</h3><p>Organiza metas, custos, margem, faturamento e decisões de investimento.</p></article>
-          <article class="capability reveal"><span>04</span><h3>Operação</h3><p>Identifica gargalos e transforma problemas recorrentes em planos de melhoria.</p></article>
-        </div>
-      </section>
-
-      <section class="ai-how section" id="funcionamento-ai">
-        <div class="section-heading reveal">
-          <span class="section-label">Como funciona</span>
-          <h2>Da pergunta ao<br />plano de ação.</h2>
-        </div>
-        <div class="how-list">
-          <article class="how-item reveal"><span>01</span><div><h3>Você informa o contexto</h3><p>Conte sobre o momento da empresa, seus números e a dificuldade que precisa resolver.</p></div></article>
-          <article class="how-item reveal"><span>02</span><div><h3>A IA encontra os pontos críticos</h3><p>As informações são analisadas em conjunto para separar sintomas das causas mais prováveis.</p></div></article>
-          <article class="how-item reveal"><span>03</span><div><h3>Você recebe uma direção prática</h3><p>A resposta apresenta prioridades, ações recomendadas e indicadores que merecem acompanhamento.</p></div></article>
-        </div>
-      </section>
-
-      <section class="pricing section" id="planos-ai">
-        <div class="pricing-heading reveal">
-          <span class="section-label">Planos</span>
-          <h2>Escolha como<br />quer começar.</h2>
-          <p>Os dois planos dão acesso à Cenvyx AI. A diferença está no período de contratação.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card reveal">
-            <div class="price-top"><span>Mensal</span><small>Flexível</small></div>
-            <div class="price"><span>R$</span><strong>29,90</strong><small>/mês</small></div>
-            <p>Para começar e avaliar a Cenvyx AI no dia a dia do seu negócio.</p>
-            <ul>
-              <li>Acesso completo à Cenvyx AI</li>
-              <li>Diagnósticos personalizados</li>
-              <li>Planos de ação práticos</li>
-              <li>Cancelamento a qualquer momento</li>
-            </ul>
-            <a class="button button-outline whatsapp-link" data-message="Olá! Quero saber mais sobre o plano mensal da Cenvyx AI." href="#" target="_blank" rel="noreferrer">Escolher mensal <span>↗</span></a>
-          </article>
-
-          <article class="price-card price-featured reveal">
-            <div class="price-top"><span>Anual</span><small>Melhor escolha</small></div>
-            <div class="price"><span>R$</span><strong>299</strong><small>/ano</small></div>
-            <p>Um ano de acesso com economia de R$ 59,80 em comparação ao plano mensal.</p>
-            <ul>
-              <li>Acesso completo à Cenvyx AI</li>
-              <li>Diagnósticos personalizados</li>
-              <li>Planos de ação práticos</li>
-              <li>Equivalente a R$ 24,92 por mês</li>
-            </ul>
-            <a class="button button-light whatsapp-link" data-message="Olá! Quero saber mais sobre o plano anual da Cenvyx AI." href="#" target="_blank" rel="noreferrer">Escolher anual <span>↗</span></a>
-          </article>
-        </div>
-      </section>
+    <main id="ai-view" data-page="ai" hidden>
+      <section class="subpage-hero ai-page-hero"><div class="subpage-title hero-entrance"><span class="product-tag"><i></i> Cenvyx AI</span><h1>Mais contexto.<br /><em>Melhores decisões.</em></h1></div><div class="subpage-side hero-entrance"><p>Uma assistente de negócios criada para transformar dúvidas, números e dificuldades em próximos passos claros.</p><a href="#inicio" data-view="home">Voltar ao portfólio ↖</a></div></section>
+      <section class="ai-demo section"><div class="ai-interface ai-interface-large reveal"><div class="interface-top"><span><img src="./cenvyx-logo.png" alt="" /> Cenvyx AI</span><i>Analisando empresa</i></div><div class="interface-query"><small>PERGUNTA ATUAL</small><p>Por que minhas vendas não estão crescendo?</p></div><div class="interface-answer"><div class="answer-label"><span>01</span><small>DIAGNÓSTICO</small></div><h3>O problema não parece estar na entrada de leads. A maior perda acontece entre o primeiro contato e o retorno comercial.</h3><div class="insight-row"><span>Conversão <strong>8%</strong></span><span>Follow-up <strong>baixo</strong></span><span>Prioridade <strong>alta</strong></span></div></div></div></section>
+      <section class="ai-positioning section reveal"><span class="overline">Uma visão conectada</span><h2>Não é uma lista de respostas prontas. É uma leitura do momento do seu negócio.</h2><p>A Cenvyx AI usa o contexto informado para organizar o problema, destacar os indicadores importantes e sugerir ações que façam sentido para a realidade da empresa.</p></section>
+      <section class="capabilities section" id="funcionamento-ai"><div class="section-head reveal"><div><span class="overline">Onde ela ajuda</span><h2>Quatro áreas.<br />Uma visão integrada.</h2></div><p>As decisões deixam de acontecer isoladas.</p></div><div class="capability-grid"><article class="reveal"><span>01</span><h3>Vendas</h3><p>Conversão, propostas, ticket médio, follow-up e motivos de perda.</p></article><article class="reveal"><span>02</span><h3>Marketing</h3><p>Público, oferta, canais, conteúdo e oportunidades de aquisição.</p></article><article class="reveal"><span>03</span><h3>Financeiro</h3><p>Faturamento, custos, margem, metas e decisões de investimento.</p></article><article class="reveal"><span>04</span><h3>Operação</h3><p>Gargalos, prioridades, processos recorrentes e planos de melhoria.</p></article></div></section>
+      <section class="ai-steps section"><div class="section-head reveal"><div><span class="overline">Como funciona</span><h2>Da pergunta ao<br />plano de ação.</h2></div></div><div class="step-stack"><article class="reveal"><span>01</span><div><h3>Você apresenta o contexto</h3><p>Conte o momento, os números e a dificuldade que precisa resolver.</p></div></article><article class="reveal"><span>02</span><div><h3>A IA organiza o problema</h3><p>Os dados são analisados em conjunto para separar sintomas de possíveis causas.</p></div></article><article class="reveal"><span>03</span><div><h3>Você recebe direção prática</h3><p>Prioridades, ações recomendadas e indicadores para acompanhar.</p></div></article></div></section>
+      <section class="pricing section" id="planos-ai"><div class="section-head reveal"><div><span class="overline">Planos</span><h2>Comece no seu ritmo.</h2></div><p>O acesso é o mesmo. Você escolhe o período.</p></div><div class="pricing-grid"><article class="price-card reveal"><div class="price-head"><span>Mensal</span><small>Flexível</small></div><div class="price"><sup>R$</sup><strong>29,90</strong><small>/mês</small></div><p>Para testar a Cenvyx AI na rotina antes de assumir um período maior.</p><ul><li>Acesso completo</li><li>Diagnósticos personalizados</li><li>Planos de ação</li><li>Cancelamento quando quiser</li></ul><a class="button button-ghost whatsapp-link interactive" data-message="Olá! Quero saber mais sobre o plano mensal da Cenvyx AI." href="#" target="_blank" rel="noreferrer"><span>Escolher mensal</span><i>↗</i></a></article><article class="price-card price-featured reveal"><div class="popular-badge">Melhor escolha</div><div class="price-head"><span>Anual</span><small>Economize R$ 59,80</small></div><div class="price"><sup>R$</sup><strong>299</strong><small>/ano</small></div><p>Um ano de acesso por um valor equivalente a R$ 24,92 por mês.</p><ul><li>Acesso completo</li><li>Diagnósticos personalizados</li><li>Planos de ação</li><li>Melhor custo-benefício</li></ul><a class="button button-light whatsapp-link interactive" data-message="Olá! Quero saber mais sobre o plano anual da Cenvyx AI." href="#" target="_blank" rel="noreferrer"><span>Escolher anual</span><i>↗</i></a></article></div></section>
+      <section class="contact-section compact-contact"><p class="overline reveal">Cenvyx AI</p><h2 class="reveal">Decidir melhor começa<br /><em>por enxergar melhor.</em></h2><div class="contact-actions reveal"><a class="button button-light whatsapp-link interactive" href="#" target="_blank" rel="noreferrer"><span>Quero conhecer</span><i>↗</i></a><a href="#inicio" data-view="home">Voltar ao portfólio</a></div></section>
     </main>
 
     <footer>
-      <a class="brand" href="#inicio" data-show-portfolio><span class="brand-mark"><img src="./cenvyx-logo.png" alt="" /></span><span>Cenvyx</span></a>
-      <p>Sites e inteligência para negócios.</p>
-      <a class="footer-phone" href="tel:+5518981466441">(18) 98146-6441</a>
-      <span>© <span id="year"></span> Cenvyx</span>
+      <div class="footer-brand"><a class="brand" href="#inicio" data-view="home"><span class="brand-mark"><img src="./cenvyx-logo.png" alt="" /></span><span class="brand-copy"><strong>Cenvyx</strong><small>Digital Studio</small></span></a><p>Sites estratégicos e inteligência para negócios reais.</p></div>
+      <div class="footer-nav"><span>Navegação</span><a href="#inicio" data-view="home">Início</a><a href="#projetos" data-view="projects">Projetos</a><a href="#cenvyx-ai" data-view="ai">Cenvyx AI</a></div>
+      <div class="footer-contact"><span>Contato</span><a href="tel:+5518981466441">(18) 98146-6441</a><a class="whatsapp-link" href="#" target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Cenvyx</span><span>Presidente Venceslau — SP</span></div>
     </footer>
   </body>
 </html>
