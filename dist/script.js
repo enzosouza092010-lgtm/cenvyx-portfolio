@@ -1,5 +1,5 @@
 // Adicione apenas os números, com DDI e DDD. Exemplo: 5511999999999.
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "5518981466441";
 const WHATSAPP_MESSAGE = "Olá! Vi o portfólio da Cenvyx e quero conversar sobre um projeto.";
 
 document.querySelectorAll(".whatsapp-link").forEach((link) => {
@@ -15,8 +15,10 @@ const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
 const portfolioView = document.getElementById("portfolio-view");
+const projectsView = document.getElementById("projects-view");
 const aiView = document.getElementById("ai-view");
 const portfolioNavigation = document.querySelectorAll(".portfolio-nav");
+const projectsNavigation = document.querySelectorAll(".projects-nav");
 const aiNavigation = document.querySelectorAll(".ai-nav");
 const skipLink = document.querySelector(".skip-link");
 
@@ -29,19 +31,26 @@ const closeMenu = () => {
 
 const showView = (view, updateHistory = true) => {
   const showAi = view === "ai";
-  portfolioView.hidden = showAi;
+  const showProjects = view === "projects";
+  portfolioView.hidden = showAi || showProjects;
+  projectsView.hidden = !showProjects;
   aiView.hidden = !showAi;
-  portfolioNavigation.forEach((nav) => { nav.hidden = showAi; });
+  portfolioNavigation.forEach((nav) => { nav.hidden = showAi || showProjects; });
+  projectsNavigation.forEach((nav) => { nav.hidden = !showProjects; });
   aiNavigation.forEach((nav) => { nav.hidden = !showAi; });
   document.body.classList.toggle("ai-active", showAi);
-  skipLink.href = showAi ? "#ai-view" : "#portfolio-view";
+  document.body.classList.toggle("projects-active", showProjects);
+  skipLink.href = showAi ? "#ai-view" : showProjects ? "#projects-view" : "#portfolio-view";
   document.title = showAi
     ? "Cenvyx AI — Inteligência para pequenos negócios"
-    : "Cenvyx — Sites e IA para negócios";
+    : showProjects
+      ? "Projetos — Cenvyx"
+      : "Cenvyx — Sites e IA para negócios";
   closeMenu();
 
   if (updateHistory) {
-    history.pushState({ view }, "", showAi ? "#cenvyx-ai" : window.location.pathname);
+    const target = showAi ? "#cenvyx-ai" : showProjects ? "#projetos" : window.location.pathname;
+    history.pushState({ view }, "", target);
   }
 
   window.scrollTo({ top: 0, behavior: "instant" });
@@ -67,6 +76,13 @@ document.querySelectorAll("[data-show-ai]").forEach((link) => {
   });
 });
 
+document.querySelectorAll("[data-show-projects]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    showView("projects");
+  });
+});
+
 document.querySelectorAll("[data-show-portfolio]").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
@@ -75,7 +91,13 @@ document.querySelectorAll("[data-show-portfolio]").forEach((link) => {
 });
 
 window.addEventListener("popstate", () => {
-  showView(window.location.hash === "#cenvyx-ai" ? "ai" : "portfolio", false);
+  const projectHashes = ["#projetos", "#feedbacks", "#contato-projetos"];
+  const view = window.location.hash === "#cenvyx-ai"
+    ? "ai"
+    : projectHashes.includes(window.location.hash)
+      ? "projects"
+      : "portfolio";
+  showView(view, false);
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -100,4 +122,11 @@ document.querySelectorAll(".filter").forEach((button) => {
   });
 });
 
-showView(window.location.hash === "#cenvyx-ai" ? "ai" : "portfolio", false);
+const projectHashes = ["#projetos", "#feedbacks", "#contato-projetos"];
+const initialView = window.location.hash === "#cenvyx-ai"
+  ? "ai"
+  : projectHashes.includes(window.location.hash)
+    ? "projects"
+    : "portfolio";
+
+showView(initialView, false);

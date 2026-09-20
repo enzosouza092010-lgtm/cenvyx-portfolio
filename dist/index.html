@@ -22,8 +22,13 @@
       <nav class="desktop-nav" aria-label="Navegação principal">
         <span class="view-nav portfolio-nav">
           <a href="#servicos">Serviços</a>
-          <a href="#projetos">Projetos</a>
+          <a href="#projetos" data-show-projects>Projetos</a>
           <a href="#processo">Processo</a>
+        </span>
+        <span class="view-nav projects-nav" hidden>
+          <a href="#inicio" data-show-portfolio>Início</a>
+          <a href="#projetos" aria-current="page">Projetos</a>
+          <a href="#feedbacks">Feedbacks</a>
         </span>
         <span class="view-nav ai-nav" hidden>
           <a href="#visao-ai">Visão geral</a>
@@ -42,8 +47,13 @@
       <nav aria-label="Navegação móvel">
         <span class="mobile-view-nav portfolio-nav">
           <a href="#servicos">Serviços</a>
-          <a href="#projetos">Projetos</a>
+          <a href="#projetos" data-show-projects>Projetos</a>
           <a href="#processo">Processo</a>
+        </span>
+        <span class="mobile-view-nav projects-nav" hidden>
+          <a href="#inicio" data-show-portfolio>Início</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#feedbacks">Feedbacks</a>
         </span>
         <span class="mobile-view-nav ai-nav" hidden>
           <a href="#visao-ai">Visão geral</a>
@@ -63,7 +73,7 @@
           <p>Desenvolvo experiências digitais sob medida e uma IA pensada para transformar dúvidas de negócio em próximos passos claros.</p>
           <div class="hero-actions">
             <a class="button button-primary whatsapp-link" href="#" target="_blank" rel="noreferrer">Quero tirar uma ideia do papel <span>↗</span></a>
-            <a class="text-link" href="#projetos">Ver projetos <span>↓</span></a>
+            <a class="text-link" href="#projetos" data-show-projects>Ver projetos <span>↗</span></a>
           </div>
         </div>
 
@@ -137,10 +147,42 @@
         </div>
       </section>
 
-      <section class="projects section" id="projetos">
+      <section class="process section" id="processo">
+        <div class="section-heading reveal">
+          <span class="section-label">02 — Como funciona</span>
+          <h2>Do problema ao<br />projeto no ar.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-step reveal"><span>01</span><h3>Diagnóstico</h3><p>Entendo o negócio, o público e o que precisa mudar.</p></article>
+          <article class="process-step reveal"><span>02</span><h3>Direção</h3><p>Definimos estrutura, conteúdo e a identidade do projeto.</p></article>
+          <article class="process-step reveal"><span>03</span><h3>Construção</h3><p>Desenvolvo, reviso e adapto tudo para celular e desktop.</p></article>
+          <article class="process-step reveal"><span>04</span><h3>Entrega</h3><p>Seu projeto entra no ar com orientação para os próximos passos.</p></article>
+        </div>
+      </section>
+
+      <section class="final-cta reveal">
+        <div class="cta-meta"><span>Tem um projeto em mente?</span><span>Disponível para novos trabalhos</span></div>
+        <h2>Vamos construir algo<br /><em>difícil de ignorar.</em></h2>
+        <a class="button button-light whatsapp-link" href="#" target="_blank" rel="noreferrer">Começar uma conversa <span>↗</span></a>
+      </section>
+    </main>
+
+    <main id="projects-view" hidden>
+      <section class="projects-page-hero" aria-labelledby="projects-title">
+        <div class="reveal">
+          <span class="section-label">Portfólio Cenvyx</span>
+          <h1 id="projects-title">Projetos reais.<br /><em>Identidades diferentes.</em></h1>
+        </div>
+        <div class="projects-intro reveal">
+          <p>Cada projeto foi criado a partir do segmento, da oferta e da experiência que o cliente precisava entregar — sem repetir fórmulas prontas.</p>
+          <a class="text-link" href="#inicio" data-show-portfolio>Voltar ao início <span>↖</span></a>
+        </div>
+      </section>
+
+      <section class="projects section projects-page-list" id="projetos">
         <div class="section-heading projects-heading reveal">
           <div>
-            <span class="section-label">02 — Projetos selecionados</span>
+            <span class="section-label">Projetos selecionados</span>
             <h2>Veja o que sua<br />marca pode se tornar.</h2>
           </div>
         </div>
@@ -196,23 +238,35 @@
         </div>
       </section>
 
-      <section class="process section" id="processo">
+      <section class="testimonials section" id="feedbacks">
         <div class="section-heading reveal">
-          <span class="section-label">03 — Como funciona</span>
-          <h2>Do problema ao<br />projeto no ar.</h2>
+          <span class="section-label">Espaço para feedbacks</span>
+          <h2>Experiências que<br />também contam.</h2>
         </div>
-        <div class="process-grid">
-          <article class="process-step reveal"><span>01</span><h3>Diagnóstico</h3><p>Entendo o negócio, o público e o que precisa mudar.</p></article>
-          <article class="process-step reveal"><span>02</span><h3>Direção</h3><p>Definimos estrutura, conteúdo e a identidade do projeto.</p></article>
-          <article class="process-step reveal"><span>03</span><h3>Construção</h3><p>Desenvolvo, reviso e adapto tudo para celular e desktop.</p></article>
-          <article class="process-step reveal"><span>04</span><h3>Entrega</h3><p>Seu projeto entra no ar com orientação para os próximos passos.</p></article>
+        <p class="testimonial-note reveal">Os textos abaixo demonstram como os depoimentos serão apresentados. São exemplos ilustrativos e serão substituídos por relatos reais autorizados.</p>
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <span>Exemplo ilustrativo</span>
+            <blockquote>“O site ficou fácil de entender e passou exatamente a imagem que eu queria para o meu negócio.”</blockquote>
+            <p><strong>Modelo de depoimento</strong><small>Loja virtual</small></p>
+          </article>
+          <article class="testimonial-card reveal">
+            <span>Exemplo ilustrativo</span>
+            <blockquote>“Gostei muito do cuidado com os detalhes. No celular ficou rápido, organizado e bem profissional.”</blockquote>
+            <p><strong>Modelo de depoimento</strong><small>Negócio local</small></p>
+          </article>
+          <article class="testimonial-card reveal">
+            <span>Exemplo ilustrativo</span>
+            <blockquote>“O processo foi direto e todas as alterações ficaram do jeito que eu precisava, sem complicação.”</blockquote>
+            <p><strong>Modelo de depoimento</strong><small>Serviço profissional</small></p>
+          </article>
         </div>
       </section>
 
-      <section class="final-cta reveal">
-        <div class="cta-meta"><span>Tem um projeto em mente?</span><span>Disponível para novos trabalhos</span></div>
-        <h2>Vamos construir algo<br /><em>difícil de ignorar.</em></h2>
-        <a class="button button-light whatsapp-link" href="#" target="_blank" rel="noreferrer">Começar uma conversa <span>↗</span></a>
+      <section class="final-cta reveal" id="contato-projetos">
+        <div class="cta-meta"><span>Quer um projeto com a sua identidade?</span><span>Atendimento pelo WhatsApp</span></div>
+        <h2>Vamos transformar sua ideia<br /><em>em presença digital.</em></h2>
+        <a class="button button-light whatsapp-link" href="#" target="_blank" rel="noreferrer">Conversar sobre meu projeto <span>↗</span></a>
       </section>
     </main>
 
@@ -315,6 +369,7 @@
     <footer>
       <a class="brand" href="#inicio" data-show-portfolio><span class="brand-mark"><img src="./cenvyx-logo.png" alt="" /></span><span>Cenvyx</span></a>
       <p>Sites e inteligência para negócios.</p>
+      <a class="footer-phone" href="tel:+5518981466441">(18) 98146-6441</a>
       <span>© <span id="year"></span> Cenvyx</span>
     </footer>
   </body>

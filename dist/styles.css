@@ -124,6 +124,12 @@ main { overflow: hidden; }
 .product-badge { width: max-content; margin-bottom: 18px; padding: 5px 9px; border: 1px solid rgba(155,92,255,.55); color: #c4a5ff; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; }
 
 .projects { border-top: 1px solid var(--line); }
+.projects-page-hero { min-height: 650px; max-width: var(--max); margin: 0 auto; padding: 180px 32px 100px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 90px; align-items: end; }
+.projects-page-hero h1 { margin: 22px 0 0; font-size: clamp(3.6rem, 7vw, 7.6rem); line-height: .94; letter-spacing: -.075em; font-weight: 500; }
+.projects-page-hero h1 em { color: #7e7e79; font: inherit; font-style: normal; font-weight: 300; }
+.projects-intro { padding-bottom: 12px; }
+.projects-intro p { margin: 0 0 34px; color: #aaa9a5; line-height: 1.75; font-size: 1.02rem; }
+.projects-page-list { padding-top: 105px; }
 .projects-heading { display: flex; justify-content: space-between; align-items: end; }
 .projects-heading h2 { margin-top: 16px; }
 .filter-group { display: flex; gap: 8px; }
@@ -200,13 +206,26 @@ main { overflow: hidden; }
 .process-step h3 { margin: 85px 0 12px; font-weight: 500; font-size: 1.3rem; }
 .process-step p { color: #92928d; margin: 0; font-size: .88rem; }
 
+.testimonials { border-top: 1px solid var(--line); }
+.testimonial-note { max-width: 720px; margin: -35px 0 55px auto; color: #8f8f8a; font-size: .88rem; line-height: 1.7; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.testimonial-card { min-height: 360px; padding: 30px; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+.testimonial-card:last-child { border-right: 0; }
+.testimonial-card > span { color: var(--accent); font-size: .66rem; text-transform: uppercase; letter-spacing: .13em; }
+.testimonial-card blockquote { margin: 70px 0 45px; font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.42; letter-spacing: -.025em; }
+.testimonial-card p { margin: auto 0 0; display: flex; flex-direction: column; gap: 3px; }
+.testimonial-card strong { font-size: .86rem; font-weight: 500; }
+.testimonial-card small { color: #7e7e79; font-size: .72rem; }
+
 .final-cta { min-height: 680px; max-width: var(--max); margin: 0 auto; padding: 90px 32px; border-top: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .cta-meta { width: 100%; display: flex; justify-content: space-between; color: #858580; font-size: .72rem; text-transform: uppercase; letter-spacing: .13em; margin-bottom: auto; }
 .final-cta h2 { margin: 60px 0 55px; font-size: clamp(3.1rem, 7vw, 7.8rem); line-height: .95; letter-spacing: -.07em; font-weight: 500; }
 .button-light { background: var(--accent); color: #fff; }
 .button-light:hover { background: #fff; color: #0b0b0b; }
-footer { max-width: var(--max); margin: 0 auto; padding: 34px 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; color: #7c7c77; font-size: .78rem; }
+footer { max-width: var(--max); margin: 0 auto; padding: 34px 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 28px; color: #7c7c77; font-size: .78rem; }
 footer .brand { color: var(--text); }
+.footer-phone { color: #c4a5ff; border-bottom: 1px solid rgba(155,92,255,.45); padding-bottom: 3px; transition: color .2s, border-color .2s; }
+.footer-phone:hover { color: #fff; border-color: #fff; }
 
 /* Cenvyx AI */
 .ai-page main { overflow: hidden; }
@@ -281,12 +300,16 @@ footer .brand { color: var(--text); }
   .hero { grid-template-columns: 1fr; gap: 65px; padding-top: 150px; }
   .hero-panel { min-height: 480px; }
   .statement, .section-heading { grid-template-columns: 1fr; gap: 30px; }
+  .projects-page-hero { grid-template-columns: 1fr; gap: 45px; align-items: center; }
   .service-content { grid-template-columns: 1fr; }
   .service-content ul { grid-column: 1; margin-top: 15px; }
   .project-visual, .project-large .project-visual, .project-wide .project-visual { height: auto; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .process-step:nth-child(2) { border-right: 0; }
   .process-step:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial-card { min-height: 300px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .testimonial-card:last-child { border-bottom: 0; }
   .ai-hero { grid-template-columns: 1fr; }
   .ai-intro, .pricing-heading { grid-template-columns: 1fr; }
   .capabilities-grid { grid-template-columns: 1fr 1fr; }
@@ -299,6 +322,8 @@ footer .brand { color: var(--text); }
   .site-header { height: 74px; padding: 0 20px; }
   .mobile-menu { inset: 74px 0 auto; padding: 28px 20px; }
   .hero { min-height: auto; padding: 130px 20px 72px; gap: 50px; }
+  .projects-page-hero { min-height: auto; padding: 135px 20px 85px; }
+  .projects-page-hero h1 { font-size: clamp(3.2rem, 14vw, 5.2rem); }
   .hero::after { display: none; }
   .hero h1 { font-size: clamp(3.25rem, 15vw, 5.2rem); }
   .hero-copy > p { margin-top: 30px; font-size: 1rem; }
@@ -308,6 +333,9 @@ footer .brand { color: var(--text); }
   .statement, .section { padding: 90px 20px; }
   .statement { gap: 24px; }
   .section-heading { margin-bottom: 54px; }
+  .testimonial-note { margin: -20px 0 45px; }
+  .testimonial-card { padding: 26px 22px; }
+  .testimonial-card blockquote { margin: 55px 0 40px; }
   .service-item { grid-template-columns: 42px 1fr; gap: 14px; padding: 40px 0; }
   .service-item:hover { padding-left: 0; padding-right: 0; }
   .circle-link { grid-column: 2; margin-top: 18px; }
