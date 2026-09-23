@@ -134,6 +134,17 @@ img { max-width: 100%; }
 .service-card > a span { transition: transform .25s; }
 .service-card > a:hover span { transform: translate(4px,-4px); }
 
+/* Site plans */
+.site-pricing { border-bottom: 1px solid var(--line); }
+.lifetime-note { margin: -38px 0 46px auto; width: max-content; display: flex; align-items: center; gap: 14px; color: var(--purple-light); font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.lifetime-note i { width: 4px; height: 4px; border-radius: 50%; background: var(--purple); box-shadow: 0 0 10px var(--purple); }
+.site-pricing-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.site-price-card { min-height: 660px; padding: 30px; }
+.site-price-card .price { margin-top: 62px; }
+.site-price-card .price strong { font-size: clamp(3.4rem,4.4vw,5.2rem); }
+.site-price-card > p { min-height: 76px; }
+.pricing-disclaimer { max-width: 760px; margin: 32px 0 0 auto; color: var(--muted-dark); font-size: .72rem; text-align: right; }
+
 /* Work */
 .work-preview { border-bottom: 1px solid var(--line); }
 .round-link { width: 112px; height: 112px; margin-left: auto; display: grid; place-items: center; position: relative; border: 1px solid var(--line-strong); border-radius: 50%; text-align: center; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; transition: background .3s, transform .3s; }
@@ -308,6 +319,9 @@ footer { max-width: var(--max); margin: 0 auto; padding: 75px 36px 28px; display
   .hero-showcase { max-width: 620px; margin-left: auto; }
   .scroll-hint { display: none; }
   .service-grid, .ai-feature, .featured-work { grid-template-columns: 1fr; }
+  .site-pricing-grid { max-width: 760px; margin-left: auto; grid-template-columns: 1fr; }
+  .site-price-card { min-height: 590px; }
+  .site-price-card > p { min-height: auto; }
   .work-card:not(.work-card-wide) { margin: 0; max-width: 760px; margin-left: auto; }
   .ai-interface { max-width: 850px; margin-left: auto; }
   .subpage-hero { grid-template-columns: 1fr; gap: 55px; min-height: auto; }
@@ -345,6 +359,9 @@ footer { max-width: var(--max); margin: 0 auto; padding: 75px 36px 28px; display
   .service-card { min-height: 570px; padding: 26px 22px; }
   .service-icon { margin-bottom: 55px; }
   .service-card ul { grid-template-columns: 1fr; }
+  .lifetime-note { width: 100%; margin: -20px 0 38px; flex-wrap: wrap; justify-content: flex-start; gap: 10px; }
+  .site-pricing-grid { margin: 0; }
+  .pricing-disclaimer { margin-top: 25px; text-align: left; }
   .round-link { width: 96px; height: 96px; margin: 0; }
   .featured-work { gap: 65px; }
   .work-media, .work-card-wide .work-media { aspect-ratio: 1.2/1; }
