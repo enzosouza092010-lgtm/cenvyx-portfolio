@@ -142,7 +142,10 @@ img { max-width: 100%; }
 .site-price-card { min-height: 660px; padding: 30px; }
 .site-price-card .price { margin-top: 62px; }
 .site-price-card .price strong { font-size: clamp(3.4rem,4.4vw,5.2rem); }
+.site-price-card .price-negotiable strong { font-size: clamp(2.7rem,3.6vw,4.4rem); letter-spacing: -.06em; }
 .site-price-card > p { min-height: 76px; }
+.site-price-card.price-featured .popular-badge { left: 24px; right: auto; }
+.site-price-card.price-featured .price-head { padding-top: 42px; }
 .pricing-disclaimer { max-width: 760px; margin: 32px 0 0 auto; color: var(--muted-dark); font-size: .72rem; text-align: right; }
 
 /* Work */
@@ -361,6 +364,7 @@ footer { max-width: var(--max); margin: 0 auto; padding: 75px 36px 28px; display
   .service-card ul { grid-template-columns: 1fr; }
   .lifetime-note { width: 100%; margin: -20px 0 38px; flex-wrap: wrap; justify-content: flex-start; gap: 10px; }
   .site-pricing-grid { margin: 0; }
+  .site-price-card.price-featured .price-head { padding-top: 0; }
   .pricing-disclaimer { margin-top: 25px; text-align: left; }
   .round-link { width: 96px; height: 96px; margin: 0; }
   .featured-work { gap: 65px; }
